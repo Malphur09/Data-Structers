@@ -26,7 +26,9 @@ public class StackLL {
     public boolean isEmpty() {
         return this.size == 0;
     }
-    public  void peek() {
+
+    //prints the top element of the stack
+    public  void top() {
         if (this.isEmpty()) {
             System.out.println("Stack is empty");
             return;

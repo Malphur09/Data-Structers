@@ -11,7 +11,6 @@ public class DoubleCircularLinkedList<E> {
             this.next = n;
             this.prev = prev;
         }
-
         // setters and getters
         public E getElement() {
             return this.element;
@@ -100,5 +99,32 @@ public class DoubleCircularLinkedList<E> {
         head = newNode;
         size++;
     }
-
+    public void removeFirst() {
+        if(isEmpty()) {
+            System.out.println("List is empty");
+            return;
+        }
+        if(size == 1) {
+            head = tail = null;
+        } else {
+            head = head.next;
+            head.prev = tail;
+            tail.next = head;
+        }
+        size--;
+    }
+    public void removeLast() {
+        if(isEmpty()) {
+            System.out.println("List is empty");
+            return;
+        }
+        if(size == 1) {
+            head = tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = head;
+            head.prev = tail;
+        }
+        size--;
+    }
 }

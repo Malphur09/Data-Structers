@@ -19,6 +19,7 @@ public class StackArray {
     public int size() {
         return top + 1;
     }
+    //top returns the top element of the stack
     public int top() {
         if (isEmpty()) {
             System.out.println("Stack is underflow");
@@ -54,9 +55,9 @@ public class StackArray {
         }
         int temp = stack[top];
         top = top - 1;
-        System.out.println("Popped " + temp + " from stack");
+        System.out.println("Popped " + temp + " from StackArray");
     }
-
+    //prints the top element of the stack
     public void peek() {
         if (isEmpty()) {
             System.out.println("Stack is underflow");
