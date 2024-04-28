@@ -9,10 +9,7 @@ public class Recursion {
         System.out.println("Digit Sum of 55: " + digitSum(55) );
     }
     public static int digitSum(int n) {
-        if (n < 10) {
-            return n;
-        }
-        return (n % 10) + digitSum(n / 10);
+        return (n < 10 ) ? n :(n % 10) + digitSum(n / 10);
     }
 }
 
