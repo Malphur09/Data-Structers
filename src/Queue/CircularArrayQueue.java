@@ -51,10 +51,10 @@ public class CircularArrayQueue {
             System.out.println("Queue is underflow");
             return;
         }
-
-        for(int i = front; i < rear; i++) {
+        int i = front;
+        for (int j = 0; j < count; j++) {
             System.out.println(Queue[i]);
+            i = (i + 1) % size;
         }
-
     }
 }
